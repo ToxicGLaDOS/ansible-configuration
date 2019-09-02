@@ -1,0 +1,18 @@
+---
+- hosts: {{local_machine}}
+  tasks:
+  - name: Sync repoistory
+    xbps:
+      update_cache: yes
+
+  - name: Install chromium
+    xbps:
+      name: chromium
+      state: present
+
+  - name: Upgrade system
+    xbps:
+      upgrade: yes
+
+                     
+
